@@ -65,10 +65,12 @@ int main(int argc, char * argv[])
       std::make_pair("object_analytics_node", "object_analytics_node::segmenter::SegmenterNode"));
     clazzes.push_back(
       std::make_pair("object_analytics_node", "object_analytics_node::merger::MergerNode"));
+    clazzes.push_back(
+      std::make_pair("object_analytics_node", "object_analytics_node::movement::MovementNode"));
   }
   if (rcutils_cli_option_exist(argv, argv + argc, "--tracking")) {
-    clazzes.push_back(
-      std::make_pair("object_analytics_node", "object_analytics_node::tracker::TrackingNode"));
+    // clazzes.push_back(
+    //   std::make_pair("object_analytics_node", "object_analytics_node::tracker::TrackingNode"));
   }
 
   rclcpp::executors::SingleThreadedExecutor exec;

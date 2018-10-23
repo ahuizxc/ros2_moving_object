@@ -151,7 +151,7 @@ void TrackingNode::tracking_publish(const std_msgs::msg::Header & header)
   if (tm_->getTrackedObjs(msg) > 0) {
     pub_tracking_->publish(msg);
   } else {
-    RCUTILS_LOG_WARN("No objects to publish!");
+    // RCUTILS_LOG_WARN("No objects to publish!");
   }
 }
 

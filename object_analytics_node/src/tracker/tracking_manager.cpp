@@ -46,8 +46,8 @@ void TrackingManager::track(
 
   while (t != trackings_.end()) {
     if (!(*t)->updateTracker(mat, stamp)) {
-      RCLCPP_WARN(node_->get_logger(), "Tracking[%d][%s] failed, may need remove!",
-        (*t)->getTrackingId(), (*t)->getObjName().c_str());
+      // RCLCPP_WARN(node_->get_logger(), "Tracking[%d][%s] failed, may need remove!",
+      //   (*t)->getTrackingId(), (*t)->getObjName().c_str());
       // TBD: Add mechanism to check whether need erase the object.
       //     t = trackings_.erase(t);
       ++t;

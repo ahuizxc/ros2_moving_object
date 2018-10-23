@@ -30,8 +30,8 @@ namespace splitter
  */
 class SplitterNode : public rclcpp::Node
 {
-public:
-  OBJECT_ANALYTICS_NODE_PUBLIC SplitterNode();
+public:OBJECT_ANALYTICS_NODE_PUBLIC
+   SplitterNode();
 
 private:
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr pub_2d_;
